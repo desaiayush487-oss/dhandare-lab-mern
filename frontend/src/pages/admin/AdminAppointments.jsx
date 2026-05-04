@@ -15,7 +15,7 @@ const AdminAppointments = () => {
       const token = localStorage.getItem('token');
       const config = { headers: { Authorization: `Bearer ${token}` } };
       
-      const res = await axios.get('http://localhost:5000/api/appointments/all', config);
+      const res = await axios.get(' https://dhandare-lab-mern.onrender.com/api/appointments/all', config);
       setAppointments(res.data);
     } catch (error) {
       console.error("Error fetching appointments", error);
@@ -32,7 +32,7 @@ const AdminAppointments = () => {
       const token = localStorage.getItem('token');
       const config = { headers: { Authorization: `Bearer ${token}` } };
       
-      await axios.put(`http://localhost:5000/api/appointments/${id}/status`, { status: newStatus }, config);
+      await axios.put(` https://dhandare-lab-mern.onrender.com/api/appointments/${id}/status`, { status: newStatus }, config);
       alert('Status Updated!');
       fetchAppointments();
     } catch (error) {
@@ -47,7 +47,7 @@ const AdminAppointments = () => {
       const token = localStorage.getItem('token');
       const config = { headers: { Authorization: `Bearer ${token}` } };
       
-      await axios.delete(`http://localhost:5000/api/appointments/${id}`, config);
+      await axios.delete(` https://dhandare-lab-mern.onrender.com/api/appointments/${id}`, config);
       fetchAppointments(); 
     } catch (error) {
       console.error(error);
@@ -71,7 +71,7 @@ const AdminAppointments = () => {
         } 
       };
 
-      await axios.post(`http://localhost:5000/api/appointments/${id}/upload`, formData, config);
+      await axios.post(` https://dhandare-lab-mern.onrender.com/api/appointments/${id}/upload`, formData, config);
       alert('Report Uploaded Successfully!');
       fetchAppointments();
     } catch (error) {
@@ -84,7 +84,7 @@ const AdminAppointments = () => {
       const token = localStorage.getItem('token');
       const config = { headers: { Authorization: `Bearer ${token}` } };
       
-      await axios.put(`http://localhost:5000/api/appointments/${id}/approve-payment`, {}, config);
+      await axios.put(` https://dhandare-lab-mern.onrender.com/api/appointments/${id}/approve-payment`, {}, config);
       
       alert('Payment Verified & Confirmation Email Sent! ✅');
       setSelectedPayment(null); 
@@ -204,7 +204,7 @@ const AdminAppointments = () => {
                   <td className="p-4">
                     {appt.reportUrl ? (
                         <div className="flex items-center gap-3">
-                        <a href={`http://localhost:5000${appt.reportUrl}`} target="_blank" className="text-blue-600 flex items-center gap-1 text-sm hover:underline font-medium">
+                        <a href={` https://dhandare-lab-mern.onrender.com${appt.reportUrl}`} target="_blank" className="text-blue-600 flex items-center gap-1 text-sm hover:underline font-medium">
                             <FileText className="w-4 h-4"/> View
                         </a>
                         <div className="relative group">
@@ -289,7 +289,7 @@ const AdminAppointments = () => {
             <div className="w-full h-64 bg-gray-100 border rounded flex items-center justify-center overflow-hidden mb-6">
               {selectedPayment.paymentScreenshot ? (
                 <img 
-                  src={`http://localhost:5000${selectedPayment.paymentScreenshot}`} 
+                  src={` https://dhandare-lab-mern.onrender.com${selectedPayment.paymentScreenshot}`} 
                   alt="Payment Proof" 
                   className="max-w-full max-h-full object-contain"
                 />

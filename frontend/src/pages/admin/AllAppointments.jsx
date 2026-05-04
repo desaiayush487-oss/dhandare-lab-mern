@@ -36,7 +36,7 @@ const AllAppointments = () => {
       const storedUser = localStorage.getItem('userInfo'); // Or 'token'
       const token = storedUser ? JSON.parse(storedUser).token : localStorage.getItem('token');
       
-      const { data } = await axios.get('http://localhost:5000/api/appointments/all', {
+      const { data } = await axios.get(' https://dhandare-lab-mern.onrender.com/api/appointments/all', {
         headers: { Authorization: `Bearer ${token}` }
       });
       

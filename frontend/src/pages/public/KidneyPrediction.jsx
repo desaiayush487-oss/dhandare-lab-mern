@@ -36,7 +36,7 @@ const KidneyPrediction = () => {
         albumin: Number(formData.albumin)
       };
 
-      const { data } = await axios.post('http://localhost:5000/api/appointments/predict-kidney', payload, {
+      const { data } = await axios.post(' https://dhandare-lab-mern.onrender.com/api/appointments/predict-kidney', payload, {
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` }
       });
       setPrediction(data.prediction);

@@ -29,8 +29,8 @@ const Dashboard = () => {
         const config = { headers: { Authorization: `Bearer ${token}` } };
         
         // Fetch Stats & Appointments
-        const statsRes = await axios.get('http://localhost:5000/api/admin/stats', config);
-        const apptRes = await axios.get('http://localhost:5000/api/appointments/all', config);
+        const statsRes = await axios.get(' https://dhandare-lab-mern.onrender.com/api/admin/stats', config);
+        const apptRes = await axios.get(' https://dhandare-lab-mern.onrender.com/api/appointments/all', config);
         
         setAllAppointments(apptRes.data);
 
@@ -69,10 +69,10 @@ const Dashboard = () => {
     setMessage('');
     try {
       const tempPassword = Math.random().toString(36).slice(-8) + "1Aa!";
-      await axios.post('http://localhost:5000/api/auth/register', {
+      await axios.post(' https://dhandare-lab-mern.onrender.com/api/auth/register', {
         fullName: 'New Admin', email: inviteEmail, password: tempPassword, phone: '0000000000', role: 'admin'
       });
-      await axios.post('http://localhost:5000/api/auth/forgotpassword', { email: inviteEmail });
+      await axios.post(' https://dhandare-lab-mern.onrender.com/api/auth/forgotpassword', { email: inviteEmail });
       setMessage('Invite sent successfully!');
       setTimeout(() => { setShowModal(false); setMessage(''); }, 2000);
     } catch (error) { setMessage(error.response?.data?.message || 'Error sending invite'); }

@@ -14,7 +14,7 @@ const Tests = () => {
 
   const fetchTests = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/tests');
+      const res = await axios.get(' https://dhandare-lab-mern.onrender.com/api/tests');
       setTests(res.data);
     } catch (error) {
       console.error("Error fetching tests");
@@ -48,10 +48,10 @@ const Tests = () => {
     e.preventDefault();
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/tests/${editingId}`, form);
+        await axios.put(` https://dhandare-lab-mern.onrender.com/api/tests/${editingId}`, form);
         toast.success('Test Updated Successfully!');
       } else {
-        await axios.post('http://localhost:5000/api/tests', form);
+        await axios.post(' https://dhandare-lab-mern.onrender.com/api/tests', form);
         toast.success('Test Added Successfully!');
       }
       
@@ -65,7 +65,7 @@ const Tests = () => {
   const handleDelete = async (id) => {
     if(!window.confirm("Are you sure?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/tests/${id}`);
+      await axios.delete(` https://dhandare-lab-mern.onrender.com/api/tests/${id}`);
       toast.success("Test Deleted");
       fetchTests();
     } catch (error) {

@@ -27,7 +27,7 @@ const Patients = () => {
           headers: { Authorization: `Bearer ${token}` }
         };
 
-        const res = await axios.get('http://localhost:5000/api/admin/patients', config);
+        const res = await axios.get(' https://dhandare-lab-mern.onrender.com/api/admin/patients', config);
         setPatients(res.data);
       } catch (err) {
         console.error("Error fetching patients", err);

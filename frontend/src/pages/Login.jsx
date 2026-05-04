@@ -17,7 +17,7 @@ const Login = () => {
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', formData);
+      const res = await axios.post(' https://dhandare-lab-mern.onrender.com/api/auth/login', formData);
       
       // Save data
       localStorage.setItem('token', res.data.token);

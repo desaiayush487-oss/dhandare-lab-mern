@@ -21,7 +21,7 @@ const ForgotPassword = () => {
     setMessage('');
 
     try {
-      await axios.post('http://localhost:5000/api/auth/forgotpassword', { email });
+      await axios.post(' https://dhandare-lab-mern.onrender.com/api/auth/forgotpassword', { email });
       setMessage(`OTP sent to ${email}. Please check your inbox.`);
       setStep(2);
     } catch (err) {
@@ -38,7 +38,7 @@ const ForgotPassword = () => {
     setError('');
 
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/verify-reset-otp', { 
+      const res = await axios.post(' https://dhandare-lab-mern.onrender.com/api/auth/verify-reset-otp', { 
         email, 
         otp 
       });

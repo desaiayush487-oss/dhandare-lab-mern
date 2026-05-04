@@ -27,7 +27,7 @@ const ResetPassword = () => {
     }
 
     try {
-      await axios.put(`http://localhost:5000/api/auth/resetpassword/${resetToken}`, { password });
+      await axios.put(` https://dhandare-lab-mern.onrender.com/api/auth/resetpassword/${resetToken}`, { password });
       setMessage('Password reset successful! Redirecting to login...');
       
       // Redirect to login after 3 seconds

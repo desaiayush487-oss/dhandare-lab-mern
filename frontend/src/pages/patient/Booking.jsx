@@ -169,7 +169,7 @@ const Booking = () => {
         }
       }
 
-      await axios.post('http://localhost:5000/api/appointments/book', formData, config);
+      await axios.post(' https://dhandare-lab-mern.onrender.com/api/appointments/book', formData, config);
       
       // <--- SAVE CART DATA TO SUMMARY BEFORE CLEARING --->
       setFinalSummary({ items: [...cart], total: totalAmount });

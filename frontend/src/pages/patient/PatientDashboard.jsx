@@ -26,7 +26,7 @@ const PatientDashboard = () => {
         const config = {
           headers: { Authorization: `Bearer ${token}` },
         };
-        const res = await axios.get('http://localhost:5000/api/appointments/my', config);
+        const res = await axios.get(' https://dhandare-lab-mern.onrender.com/api/appointments/my', config);
         setAppointments(res.data);
       } catch (error) {
         console.error("Error fetching appointments", error);
@@ -145,7 +145,7 @@ const PatientDashboard = () => {
                   
                   {appt.reportUrl ? (
                     <a 
-                      href={`http://localhost:5000${appt.reportUrl}`} 
+                      href={` https://dhandare-lab-mern.onrender.com${appt.reportUrl}`} 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded text-sm hover:bg-green-700 transition shadow-sm"

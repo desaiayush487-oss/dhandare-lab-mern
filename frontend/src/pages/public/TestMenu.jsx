@@ -17,7 +17,7 @@ const TestMenu = () => {
   useEffect(() => {
     const fetchTests = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/tests');
+        const res = await axios.get(' https://dhandare-lab-mern.onrender.com/api/tests');
         // Only show active tests
         const activeTests = res.data.filter(test => test.isActive);
         setTests(activeTests);
