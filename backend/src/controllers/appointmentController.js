@@ -8,7 +8,7 @@ const fs = require('fs');
 
 // --- 2. CONFIGURATION ---
 const MY_EMAIL = 'desaiayush487@gmail.com'; 
-const MY_PASSWORD = 'zmtjjqkdiqfptcmq'; 
+const MY_PASSWORD = 'hjtqcdixcfxoltet'; 
 
 // --- 3. INTERNAL EMAIL HELPER FUNCTION ---
 const sendEmailInternal = async (to, subject, text) => {

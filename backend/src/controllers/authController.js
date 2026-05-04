@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 // --- 1. CONFIGURATION (ENTER YOUR DETAILS HERE) ---
 // ⚠️ REPLACE THE TEXT INSIDE THE QUOTES WITH YOUR ACTUAL DETAILS ⚠️
 const MY_EMAIL = 'desaiayush487@gmail.com '; 
-const MY_PASSWORD = 'zmtjjqkdiqfptcmq'; 
+const MY_PASSWORD = 'hjtqcdixcfxoltet'; 
 
 // --- 2. INTERNAL EMAIL FUNCTION ---
 const sendEmailInternal = async (to, subject, text) => {
